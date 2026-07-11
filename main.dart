@@ -3,6 +3,7 @@ void main() {}
 abstract class PaymentMethod {
   void Pay(double amount);
 }
+
 class JaibMethod implements PaymentMethod {
   @override
   void Pay(double amount) {
@@ -14,3 +15,13 @@ class JaibMethod implements PaymentMethod {
   }
 }
 
+class JwallyMethod implements PaymentMethod {
+  @override
+  void Pay(double amount) {
+    if (amount > 100000) {
+      print("Amont Exceded the limit");
+    } else {
+      print("You paying ${amount} using Jwally pyment method");
+    }
+  }
+}
