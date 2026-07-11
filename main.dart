@@ -1,4 +1,12 @@
-void main() {}
+void main() {
+  PaymentMethod pm;
+  pm = new JaibMethod();
+  pm.Pay(5001);
+  pm.Pay(100);
+  pm = new JwallyMethod();
+  pm.Pay(1000);
+  pm.Pay(1000000000);
+}
 
 abstract class PaymentMethod {
   void Pay(double amount);
